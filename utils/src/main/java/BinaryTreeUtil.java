@@ -63,22 +63,22 @@ public class BinaryTreeUtil {
 
 
     public static BinaryTree<Integer> getFigureTenDotOne() {
-        BinaryTree<Integer> tree = new BinaryTree<>(314);
-        tree.left = new BinaryTree<>(6);
-        tree.left.left = new BinaryTree<>(271);
-        tree.left.left.left = new BinaryTree<>(28);
-        tree.left.left.right = new BinaryTree<>(0);
-        tree.left.right = new BinaryTree<>(561);
-        tree.left.right.right = new BinaryTree<>(3);
-        tree.left.right.right.left = new BinaryTree<>(17);
-        tree.right = new BinaryTree<>(6);
-        tree.right.left = new BinaryTree<>(2);
-        tree.right.left.right = new BinaryTree<>(1);
-        tree.right.left.right.left = new BinaryTree<>(401);
-        tree.right.left.right.left.right = new BinaryTree<>(641);
-        tree.right.left.right.right = new BinaryTree<>(257);
-        tree.right.right = new BinaryTree<>(271);
-        tree.right.right.right = new BinaryTree<>(28);
+        BinaryTree<Integer> tree = new BinaryTree<>(314, "A");
+        tree.left = new BinaryTree<>(6, "B");
+        tree.left.left = new BinaryTree<>(271,"C");
+        tree.left.left.left = new BinaryTree<>(28, "D");
+        tree.left.left.right = new BinaryTree<>(0, "E");
+        tree.left.right = new BinaryTree<>(561, "F");
+        tree.left.right.right = new BinaryTree<>(3, "G");
+        tree.left.right.right.left = new BinaryTree<>(17, "H");
+        tree.right = new BinaryTree<>(6, "I");
+        tree.right.left = new BinaryTree<>(2,"J");
+        tree.right.left.right = new BinaryTree<>(1, "K");
+        tree.right.left.right.left = new BinaryTree<>(401, "L");
+        tree.right.left.right.left.right = new BinaryTree<>(641,"M");
+        tree.right.left.right.right = new BinaryTree<>(257, "N");
+        tree.right.right = new BinaryTree<>(271, "O");
+        tree.right.right.right = new BinaryTree<>(28,"P");
         return tree;
     }
 

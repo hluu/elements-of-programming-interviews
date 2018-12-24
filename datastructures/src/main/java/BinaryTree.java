@@ -2,11 +2,15 @@ public class BinaryTree<T> {
     public T data;
     public BinaryTree<T> left, right;
     public Boolean isVisited = false;
-
-
+    public String code;
 
     public BinaryTree(T data) {
         this.data = data;
+    }
+
+    public BinaryTree(T data, String code) {
+        this(data);
+        this.code = code;
     }
 
     public BinaryTree(T data, BinaryTree<T> left, BinaryTree<T> right) {

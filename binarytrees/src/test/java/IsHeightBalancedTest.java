@@ -41,6 +41,7 @@ public class IsHeightBalancedTest {
 
     private void test(boolean expected, BinaryTree<Integer> tree) {
         assertEquals(expected, IsHeightBalanced.isBalanced(tree));
+        assertEquals(expected, IsHeightBalanced.isBalancedUsingHeight(tree));
     }
 
 }
