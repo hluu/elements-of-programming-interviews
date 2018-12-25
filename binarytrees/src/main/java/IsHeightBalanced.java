@@ -44,12 +44,18 @@ public class IsHeightBalanced {
     }
 
 
+    /**
+     * This is using the post-order traversal to check the balance
+     * @param tree
+     * @return
+     */
     private static NodeStatusWithHeight checkBalanced(BinaryTree<Integer> tree) {
         // base case,
         if (tree == null) {
             return new NodeStatusWithHeight(true, -1);
         }
 
+        // left side
         NodeStatusWithHeight leftStatus = checkBalanced(tree.left);
         // if left subtree is not balanced, no need to check the right subtree
         if (!leftStatus.isBalanced) {
@@ -57,6 +63,7 @@ public class IsHeightBalanced {
         }
 
 
+        // right side
         NodeStatusWithHeight rightStatus = checkBalanced(tree.right);
         // if right substree is not balanced, short circuit it
         if (!rightStatus.isBalanced) {
@@ -64,6 +71,7 @@ public class IsHeightBalanced {
         }
 
 
+        // perform the needed work
         boolean isBalanced = Math.abs(leftStatus.height - rightStatus.height) <= 1;
         int height = Math.max(leftStatus.height, rightStatus.height) + 1;
 
@@ -96,6 +104,12 @@ public class IsHeightBalanced {
         return Math.abs(leftHeight - rightHeight) <= 1;
     }
 
+    /**
+     * Following the post-order traversal (left, right, node)
+     *
+     * @param tree
+     * @return
+     */
     private static int getHeight(BinaryTree<Integer> tree) {
 
         // base case

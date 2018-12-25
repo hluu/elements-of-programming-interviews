@@ -39,6 +39,16 @@ public class ComputeLowestCommonAncestorTest {
         test(expected, tree, node0, node1);
     }
 
+    @Test
+    public void LCA4() throws Exception {
+        tree = BinaryTreeUtil.getFigureTenDotOne();
+        node0 = tree.left.right.right.left;
+        node1 = tree.right.right.right;
+        expected = tree;
+
+        test(expected, tree, node0, node1);
+    }
+
     private void test(BinaryTree<Integer> expected, BinaryTree<Integer> tree, BinaryTree<Integer> node0, BinaryTree<Integer> node1) {
         assertEquals(expected, ComputeLowestCommonAncestor.LCA(tree,node0,node1));
     }

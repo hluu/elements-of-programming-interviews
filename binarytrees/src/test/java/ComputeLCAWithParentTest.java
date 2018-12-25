@@ -42,6 +42,8 @@ public class ComputeLCAWithParentTest {
 
     private void test(BinaryTreeParent<Integer> expected, BinaryTreeParent<Integer> node0, BinaryTreeParent<Integer> node1) {
         assertEquals(expected, ComputeLCAWithParent.LCA(node0, node1));
+        System.out.println("**** calling lcaUsingDepth ***");
+        assertEquals(expected, ComputeLCAWithParent.lcaUsingDepth(node0, node1));
     }
 
 }
